@@ -19,6 +19,7 @@ twitter_username: CardGamesSoc
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-autoprefixer
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -45,4 +46,8 @@ defaults:
       path: "assets/img"
     values:
       image: true
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
