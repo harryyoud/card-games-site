@@ -1,0 +1,9 @@
+intro_banner:
+  image: intro_banner
+  title: Welcome!
+  height: 300px
+  button:
+    text: Find out more about us &raquo;
+    link: about
+  text_color: white
+  text: We are the University of Sheffield's Card Games Society. We are a relaxed and friendly society who meet once a week to play a variety of different card games for people of all abilities and we also hold regular socials.

@@ -1,0 +1,15 @@
+---
+---
+
+// Width of the content area
+$content-width:    1200px;
+$on-palm:          800px;
+$on-laptop:        1200px;
+
+$background-color: #f6f6f6;
+
+.contact-widget p {
+	display: inline;
+}
+
+@import "{{ site.theme }}"

@@ -1,0 +1,24 @@
+{% if page.banner %}
+  {% assign banner = site.data.banners[page.banner] %}
+  {% for image in site.static_files %}
+    {% if image.path contains 'assets/img/banner' and image.basename == banner.image %}
+      {% assign image_url = image.path %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  <div class="banner" style="height: {{ banner.height }}; background-image: url('{{ site.baseurl }}{{ image_url }}');">
+    <div class="wrapper" style="color: {{ banner.text_color }}; position: relative; top: 50%; transform: perspective(1px) translateY(-50%);">
+      <h1>
+        {{ banner.title }}
+      </h1>
+      <p>
+        {{ banner.text }}
+      </p>
+      <a href="{{ banner.button.link }}">
+        <button class="btn-danger btn">
+          {{ banner.button.text }}
+        </button>
+      </a>
+    </div>
+  </div>
+{% endif %}
