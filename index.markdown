@@ -1,6 +1,8 @@
 ---
+title: Home
 layout: home
 banner: intro_banner
+permalink: /
 ---
 
 {% capture col1 %}

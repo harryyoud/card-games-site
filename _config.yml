@@ -47,3 +47,7 @@ sass:
   sass_dir: _sass
   style: compressed
 
+header_pages:
+ - index.markdown
+ - about.markdown
+ - games.markdown
