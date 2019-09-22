@@ -6,7 +6,7 @@
       {% break %}
     {% endif %}
   {% endfor %}
-  <div class="banner" style="height: {{ banner.height }}; background-image: url('{{ site.baseurl }}{{ image_url }}');">
+  <div class="banner" style="height: {{ banner.height }}; background-image: url('{{ image_url | relative_url }}');">
     <div class="wrapper" style="color: {{ banner.text_color }}; position: relative; top: 50%; transform: perspective(1px) translateY(-50%);">
       <h1>
         {{ banner.title }}
