@@ -2,8 +2,8 @@ title: Card Gaming Society
 description: >-
   The Card Gaming Society at the University of Sheffield meets every Sunday to
   play new and exciting card games. Run by students, for students
-baseurl: "/new"
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/"
+url: "https://cardgaming.union.shef.ac.uk"
 twitter_username: CardGamesSoc
 facebook_username: SheffieldCardGamesSociety
 
