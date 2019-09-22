@@ -3,7 +3,14 @@
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    {% for image in site.static_files %}
+      {% if image.path contains 'assets/img/logo' and image.basename == 'logo' %}
+        {% assign image_url = image.path %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}"><img src="{{ image_url | relative_url }}" style="max-height: 150px;"/></a>
 
     {%- if page_paths -%}
       <nav class="site-nav">
