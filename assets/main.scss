@@ -8,8 +8,35 @@ $on-laptop:        1200px;
 
 $background-color: #f6f6f6;
 
+.site-nav .page-link {
+	display: inline-block;
+}
+
+nav.site-nav {
+	line-height: 0px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+main.page-content {
+	padding-top: 0px;
+}
+
 .contact-widget p {
 	display: inline;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.home .page-heading {
+	display:none;
+}
+
+.social-media-list .svg-icon {
+	padding-right: 0px;
 }
 
 @import "bootstrap/scss/bootstrap";
