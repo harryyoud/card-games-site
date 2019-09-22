@@ -38,6 +38,10 @@ defaults:
       path: "assets/img"
     values:
       image: true
+  - scope:
+      path: "assets/games"
+    values:
+      game: true
 
 sass:
   sass_dir: _sass

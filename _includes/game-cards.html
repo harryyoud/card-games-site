@@ -1,0 +1,26 @@
+<div class="card-columns">
+
+{% assign pdfs = site.static_files | where: "game", true %}
+
+{% for game in include.games %}
+  {% assign other_names = game.other_names | join: ", " %}
+  {% for pdf in pdfs %}
+    {% if pdf.name == game.pdf %}
+      {% assign pdf_file = pdf.path | relative_url %}
+    {% endif %}
+  {% endfor %}
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ game.name }}</h5>
+      <p class="card-text">{{ game.tagline }}</p>
+      <a href="{{ pdf_file }}" target="_blank"><p class="card-text">Rules</p></a>
+      {% if game.other_names %}
+        <p class="card-text"><small class="text-muted">Also known as: {{ other_names }}</small></p>
+      {% endif %}
+    </div>
+  </div>
+
+  {% endfor %}
+
+</div>
