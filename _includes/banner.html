@@ -14,11 +14,13 @@
       <p>
         {{ banner.text }}
       </p>
-      <a href="{{ banner.button.link }}">
-        <button class="btn-danger btn">
-          {{ banner.button.text }}
-        </button>
-      </a>
+      {% for button in banner.buttons %}
+        <a href="{{ button.link }}">
+          <button class="btn-danger btn">
+            {{ button.text }}
+          </button>
+        </a>
+      {% endfor %}
     </div>
   </div>
 {% endif %}
