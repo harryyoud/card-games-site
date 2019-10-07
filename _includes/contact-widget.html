@@ -1,33 +1,33 @@
 <div class="contact-widget">
-	<p>If you have any questions, there are many ways to get in touch with us.</p>
-	<div>
-		<a href="{{ include.email }}" title="Send us an email">
-			<img src="{{ '/assets/img/icons/email.png' | relative_url }}" width="30" alt="Email icon">
-			<p>Send us an email</p>
-		</a>
-	</div>
-	<div>
-		<a href="{{ include.union }}" title="Join our mailing list">
-			<img src="{{ '/assets/img/icons/email.png' | relative_url }}" width="30" alt="Email icon">
-			<p>Join our mailing list</p>
-		</a>
-	</div>
-	<div>
-		<a href="{{ include.union }}" title="Visit our Sheffield Students' Union page">
-			<img src="{{ '/assets/img/icons/union.png' | relative_url }}" width="30" alt="Union icon">
-			<p>Visit our Students' Union page</p>
-		</a>
-	</div>
-	<div>
-		<a href="{{ include.facebook }}" title="Visit our Facebook page">
-			<img src="{{ '/assets/img/icons/facebook.png' | relative_url }}" width="30" alt="Facebook icon">
-			<p>Visit our Facebook page</p>
-		</a> 
-	</div>
-	<div>
-		<a href="{{ include.twitter }}" title="Visit our Twitter page">
-			<img src="{{ '/assets/img/icons/twitter.png' | relative_url }}" width="30" alt="Twitter icon">
-			<p>Visit our Twitter page</p>
-		</a>
-	</div>
+	{% assign socials = site.data.social | where_exp: "item","include.socials contains item.name" | default: site.data.social %}
+	{% for social in socials %}
+		{% unless social.link %}
+			{% case social.name %}
+				{% when 'facebook' %}
+					{% assign link = "https://facebook.com/" | append: site.facebook_username %}
+				{% when 'twitter' %}
+					{% assign link = "https://twitter.com/" | append: site.twitter_username %}
+				{% else %}
+					{% continue %}
+			{% endcase %}
+		{% endunless %}
+		{% assign img = social.image | default: social.name %}
+		{% for icon in site.static_files %}
+			{% unless icon.image and icon.icon and icon.basename == img %}
+				{% continue %}
+			{% endunless %}
+			{% assign img_path = icon.path %}
+		{% endfor %}
+
+		<div>
+			<a href="{{ link }}" title="{{ social.text }}">
+				{% if img_path %}
+					<img src="{{ img_path | relative_url }}" />
+				{% endif %}
+				<p>{{ social.text }}</p>
+			</a>
+		</div>
+		{% assign img = nil %}
+		{% assign img_path = nil %}
+	{% endfor %}
 </div>

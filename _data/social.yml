@@ -1,0 +1,18 @@
+ - name: email
+   link: mailto:cardgaming@sheffield.ac.uk
+   text: Send us an email
+
+ - name: mailinglist
+   link: https://yoursu.sheffield.ac.uk/groups/card-gaming-society
+   text: Join our mailing list
+   image: email
+
+ - name: union
+   link: https://yoursu.sheffield.ac.uk/groups/card-gaming-society
+   text: Find us on the SU website
+
+ - name: facebook
+   text: Check out our Facebook Page
+
+ - name: twitter
+   text: Visit our Twitter page

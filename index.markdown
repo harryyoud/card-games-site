@@ -13,7 +13,7 @@ permalink: /
 {% capture col2 %}
 ## Get in Contact
 If you have any questions, there are many ways to get in touch with us.
-{% include contact-widget.html email='cardgaming@sheffield.ac.uk' union='http://yoursu.sheffield.ac.uk/groups/card-gaming-society' facebook='https://www.facebook.com/SheffieldCardGamesSociety' twitter='https://twitter.com/CardGamesSoc' %}
+{% include contact-widget.html %}
 {% endcapture %}
 
 {% include bootstrap-8-4.html col1=col1 col2=col2 %}
