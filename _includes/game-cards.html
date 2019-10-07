@@ -10,17 +10,28 @@
     {% endif %}
   {% endfor %}
 
+  {% unless game.name %}
+    {% continue %}
+  {% endunless %}
+
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">{{ game.name }}</h5>
-      <p class="card-text">{{ game.tagline }}</p>
-      <a href="{{ pdf_file }}" target="_blank"><p class="card-text">Rules</p></a>
+      {% if game.tagline %}
+        <p class="card-text">{{ game.tagline }}</p>
+      {% endif %}
+      {% if pdf_file %}
+        <a href="{{ pdf_file }}" target="_blank"><p class="card-text">Rules</p></a>
+      {% endif %}
       {% if game.other_names %}
         <p class="card-text"><small class="text-muted">Also known as: {{ other_names }}</small></p>
       {% endif %}
     </div>
   </div>
 
-  {% endfor %}
+{% assign pdf_file = nil %}
+
+{% endfor %}
 
 </div>
+
