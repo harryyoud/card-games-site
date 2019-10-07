@@ -1,7 +1,7 @@
 {% if page.banner %}
   {% assign banner = site.data.banners[page.banner] %}
   {% for image in site.static_files %}
-    {% if image.path contains 'assets/img/banner' and image.basename == banner.image %}
+    {% if image.banner and image.basename == banner.image %}
       {% assign image_url = image.path %}
       {% break %}
     {% endif %}
