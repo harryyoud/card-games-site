@@ -1,0 +1,8 @@
+{%- for image in site.static_files -%}
+	{%- if image.favicon or image.misc -%}
+		{%- unless image.name == include.f -%}
+			{%- continue -%}
+		{%- endunless -%}
+		{{ image.path | relative_url }}
+	{%- endif -%}
+{%- endfor -%}
