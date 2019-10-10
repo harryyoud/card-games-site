@@ -20,7 +20,7 @@
 		{% endfor %}
 
 		<div>
-			<a href="{{ link }}" title="{{ social.text }}">
+			<a href="{{ social.link | default: link }}" title="{{ social.text }}">
 				{% if img_path %}
 					<img src="{{ img_path | relative_url }}" />
 				{% endif %}
