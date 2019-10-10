@@ -1,13 +1,19 @@
 <div class="card-columns">
 
 {% assign pdfs = site.static_files | where: "game", true %}
+{% assign games = include.games | default: site.data.games %}
 
-{% for game in include.games %}
+{% for game in games %}
   {% assign other_names = game.other_names | join: ", " %}
   {% for pdf in pdfs %}
-    {% if pdf.name == game.pdf %}
+    {% if game.pdf and pdf.name == game.pdf %}
       {% assign pdf_file = pdf.path | relative_url %}
+      {% break %}
     {% endif %}
+    {% unless pdf.game and pdf.basename != game.name %}
+      {% assign pdf_file = pdf.path | relative_url %}
+      {% break %}
+    {% endunless %}
   {% endfor %}
 
   {% unless game.name %}

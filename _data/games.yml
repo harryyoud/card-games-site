@@ -1,49 +1,41 @@
  - name: 500
    other_names:
     - Bid Euchre
-   pdf: 500.pdf
    tagline: Be the first player to reach 500 points through bidding &amp; trick taking
 
  - name: Egyptian War
    other_names:
     - Egyptian Ratscrew
-   pdf: Egyptian War.pdf
    tagline: Obtain all cards from opponents
 
  - name: Hearts
    other_names:
     - Black Lady
     - Black Maria
-   pdf: Hearts.pdf
    tagline: Finish with the lowest amount of points by avoiding hearts and the Q&spades;
 
  - name: Irish Snap
-   pdf: Irish Snap.pdf
    tagline: Lose all the cards in your hand as quickly as possible
 
  - name: Kaboo
    other_names:
     - Cabo
     - Cairo
-   pdf: Kaboo.pdf
    tagline: To have the lowest total value of cards by switching or eliminating cards in your hand
 
  - name: Racing Demons
    other_names:
     - Harry Youd's Happy Place
-   pdf: Racing Demons.pdf
    tagline: Score the highest number of points by the end of the game
 
  - name: Shithead
    other_names:
     - Shed
     - Magic Fingers
-   pdf: Shithead.pdf
    tagline: Score the highest number of points by the end of the game
 
  - name: Spoons
    other_names:
     - Pigs
     - Tounges
-   pdf: Spoons.pdf
    tagline: To shed all cards, either being first (magic fingers), or not last (shithead)
