@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+- 2.6.5
+cache: bundler
+script: bundle exec jekyll build
+notifications:
+  slack:
+    secure: G+kVKOT7mCB9fHpT9XkNWCNh4tZgRuDzWWF8qFxnnk5TbrQIRxWfgUQ+xaohKsAUaoemm8y0/1QW0Z7K9qdrGK7PheCKIol2XSMTPFFcR+NI4dP8xi68lwoB4OmdJw+IeM5BdTPVHy/yKFHw5sfplVnHGAjZcoypbISITkp9qzvtKzNLfwSHbO3ClNJqgBm6ofH9kGHdJMS44gcKltWmAzq0TPWPEyiq15ZkYQltchXUGYxWhuaTMPXIgziGYSGj+0siZBFDWTlg31TVESuGZPrMcHGjHhcpf6QLrh5T5WYoR4cxviGX3yEQuweDf1J3gJLbLO38Hm7SQ0Qm/5T8XUFkxqMkiWHLA6TOVD5lLxSuh//+pgyRNQv0cEbnq9/Fz+t+N9mjNqo+Z0eFzA6l89B4tLky6Nnr3Nn1yx4XXTwNuRiq6rLv7MTa6Ym5+Fp83OXvNEZ/r6Vi3GYf0VGrjMiMUhLVtqcHFS0Q68hRsXz6dHSNTEFE+pGtGH5CvQm6bI/U7NZSrKj8K/5B5IPqO6pfPK4TIbaZ/N87s1W7Hf2bRz8Ei5FZatdfmTB9cqf1tE1cmeJIgMTeXt78Kee3hDRL5hCcSBD77LoYd/hgBOobJ72maxBecGzENdTxMfwbkrKt5thpLve9YtC2tDnfOyI362Za0YWvMZKm/us3ZL4=
+    on_success: never
+    on_failure: always
+  email: false
