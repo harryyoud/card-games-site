@@ -10,6 +10,9 @@ permalink: /about/
 | {{ member.role }} | {{ member.name }} |
 {%- endfor %}
 
+We're completely democratic, and you can check the notes of our
+[previous committee meetings]({{ '/meetings' | relative_url }})
+
 ## Frequently Asked Questions
 
 #### What sort of card games do you play?

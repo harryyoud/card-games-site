@@ -1,0 +1,25 @@
+<div class="card-columns">
+
+{% assign pdfs = site.static_files | where: "meeting", true %}
+{% assign meetings = include.meetings | default: site.data.meetings %}
+
+{% for meeting in meetings %}
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ meeting.type }} - {{ meeting.purpose }}</h5>
+      {% for pdf in pdfs %}
+        {% for file in meeting.files %}
+          {% if pdf.name == file.filename %}
+            <a href="{{ pdf.path }}" target="_blank"><p class="card-text">{{ file.name }}</p></a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      <p class="card-text"><small class="text-muted">Date: {{ meeting.date }}</small></p>
+    </div>
+  </div>
+
+{% endfor %}
+
+</div>
+

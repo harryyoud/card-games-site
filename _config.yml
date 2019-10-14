@@ -53,6 +53,10 @@ defaults:
     values:
       icon: true
   - scope:
+      path: "assets/meetings"
+    values:
+      meeting: true
+  - scope:
       path: "assets/misc"
     values:
       misc: true
