@@ -3,7 +3,7 @@ FROM ruby:latest
 WORKDIR /src
 COPY Gemfile Gemfile.lock /src/
 RUN gem install bundler
-RUN bundle install --clean
+RUN bundle install
 
 COPY . /src
 
