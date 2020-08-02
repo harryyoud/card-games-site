@@ -1,17 +1,25 @@
 ---
 ---
 
-// Width of the content area
+/* Use some more of the screen estate given to us */
 $content-width:    1200px;
-$on-palm:          800px;
 $on-laptop:        1200px;
+$on-palm:          800px;
 
+/* Override the background colour to give better contrast against the twitter widget */
 $background-color: #f6f6f6;
 
+
+@import "bootstrap/scss/bootstrap";
+@import "{{ site.theme }}";
+
+
+/* Make sure navbar buttons sit side by side */
 .site-nav .page-link {
 	display: inline-block;
 }
 
+/* Pull navbar to right and remove gap between it and the content */
 nav.site-nav {
 	line-height: 0px;
 	position: absolute;
@@ -19,32 +27,35 @@ nav.site-nav {
 	right: 0;
 }
 
+/* Remove gap between navbar and content */
 main.page-content {
 	padding-top: 0px;
 }
 
+/* Put text line next to image, not below */
 .contact-widget p {
 	display: inline;
 }
 
+/* Align navbar to content-width */
 .wrapper {
 	position: relative;
 }
 
+/* Don't show page heading */
 .home .page-heading {
 	display:none;
 }
 
+/* Don't hide half of the icon (why do we need this?) */
 .social-media-list .svg-icon {
 	padding-right: 0px;
 }
 
+/* Shrink our icons a bit */
 .contact-widget img {
 	width: 30px;
 }
-
-@import "bootstrap/scss/bootstrap";
-@import "{{ site.theme }}"
 
 /*
  *   Resize the footer columns to give us more space for our long social media usernames
