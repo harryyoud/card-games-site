@@ -45,3 +45,22 @@ main.page-content {
 
 @import "bootstrap/scss/bootstrap";
 @import "{{ site.theme }}"
+
+/*
+ *   Resize the footer columns to give us more space for our long social media usernames
+ *   We use an inverse media query to our parent theme in order to avoid messing with smaller screens
+ */
+@media screen and (min-width: $on-laptop) {
+  .footer-col-1 {
+    width: -webkit-calc(25% - (#{$spacing-unit} / 2));
+    width:         calc(25% - (#{$spacing-unit} / 2));
+  }
+  .footer-col-2 {
+    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+    width:         calc(40% - (#{$spacing-unit} / 2));
+  }
+  .footer-col-3 {
+    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    width:         calc(35% - (#{$spacing-unit} / 2));
+  }
+}
